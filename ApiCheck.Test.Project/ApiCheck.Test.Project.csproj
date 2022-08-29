@@ -1,14 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net45</TargetFramework>
     <AssemblyTitle>ApiCheckTestProject</AssemblyTitle>
-    <Company>ise Individuelle Software-Entwicklung GmbH</Company>
     <Product>ApiCheck.Test.Project</Product>
-    <Copyright>Copyright © 2014</Copyright>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <FileVersion>2.0.0.0</FileVersion>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <PostBuildEvent />
+    <SignAssembly>True</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Version1|AnyCPU'">
     <DefineConstants>VERSION1</DefineConstants>
@@ -17,15 +14,10 @@
     <DefineConstants>VERSION2</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\ApiCheck.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <PostBuildEvent />
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="obj\Version2\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

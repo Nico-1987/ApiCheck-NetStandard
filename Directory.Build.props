@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <TargetPlatform Condition="$(MSBuildProjectExtension.Contains('csproj'))=='True'">AnyCPU</TargetPlatform>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <Company>ise Individuelle Software-Entwicklung GmbH</Company>
+    <Copyright>Copyright 2022</Copyright>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+</Project>
