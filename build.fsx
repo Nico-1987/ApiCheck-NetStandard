@@ -26,12 +26,6 @@ Target "Clean" (fun _ ->
     CleanDirs [buildDir; deployDir; packagingDir]
 )
 
-Target "SetVersion" (fun _ ->
-    CreateCSharpAssemblyInfo @".\SolutionInfo.cs"
-        [Attribute.FileVersion version
-         Attribute.Version version]
-)
-
 Target "Compile" (fun _ ->
     !! @"ApiCheck.sln"
     |> MSBuildRelease buildDir "Build"

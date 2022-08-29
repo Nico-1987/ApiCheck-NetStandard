@@ -16,7 +16,7 @@ namespace ApiCheck.Loader
 
       using (var reader = new StreamReader(stream))
       {
-        Deserializer deserializer = new DeserializerBuilder()
+        IDeserializer deserializer = new DeserializerBuilder()
           .WithNamingConvention(new CamelCaseNamingConvention())
           .Build();
 

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ApiCheck.Configuration;
+using NUnit.Framework.Interfaces;
 
 namespace ApiCheck.NUnit
 {
@@ -81,7 +82,7 @@ namespace ApiCheck.NUnit
       TestCaseData testCaseData = new TestCaseData(!fail, GetFailMessage(comparerResult)).SetName(comparerResult.Name).SetCategory(apiTestData.Category);
       if (apiTestData.Explicit)
       {
-        testCaseData.MakeExplicit("Set explicit by ApiTestAttribute");
+        testCaseData.Explicit("Set explicit by ApiTestAttribute");
       }
       return testCaseData;
     }

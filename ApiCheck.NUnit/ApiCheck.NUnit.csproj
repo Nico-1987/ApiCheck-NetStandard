@@ -1,27 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net45</TargetFramework>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>ApiCheckNUnit</AssemblyTitle>
     <Product>ApiCheck.NUnit</Product>
-    <DocumentationFile>bin\$(Configuration)\ApiCheck.NUnit.xml</DocumentationFile>
-    <SignAssembly>True</SignAssembly>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\ApiCheck.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="2.6.4" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\SolutionInfo.cs" Link="SolutionInfo.cs" />
+    <PackageReference Include="NUnit" Version="2.13.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApiCheck\ApiCheck.csproj" />
