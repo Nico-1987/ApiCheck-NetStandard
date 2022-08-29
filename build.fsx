@@ -20,7 +20,7 @@ let globalDescription = "Library comparing different versions of an api using re
 let packages =
     [ "ApiCheck", globalDescription, ["YamlDotNet", "12.0.0"]
       "ApiCheck.Console", globalDescription + " Console application.", []
-      "ApiCheck.NUnit", globalDescription + " NUnit integration.", ["ApiCheck", version; "NUnit", "2.13.3"] ]
+      "ApiCheck.NUnit", globalDescription + " NUnit integration.", ["ApiCheck", version; "NUnit", "3.13.3"] ]
 
 Target "Clean" (fun _ ->
     CleanDirs [buildDir; deployDir; packagingDir]
